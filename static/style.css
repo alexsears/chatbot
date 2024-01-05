@@ -1,0 +1,76 @@
+#main-container {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+#image-container {
+    flex: 0 0 25%;
+    max-width: 25%; /* Ensuring the maximum width is also set */
+    /* If the image is not resizing correctly, you may need to adjust the image itself */
+    display: flex;
+    justify-content: center; /* Centering the image within the container */
+    align-items: center;
+}
+
+#image-container img {
+    width: 100%; /* Make the image expand to fill the container */
+    height: auto; /* Keep the image aspect ratio */
+}
+
+#chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    #chat-box {
+    white-space: pre-wrap; /* Allows line breaks and spaces */
+}
+
+}
+/* Rest of your CSS */
+
+
+/* Style the input and button similarly to before */
+
+ 
+#user-input {
+    width: 70%;
+    padding: 10px;
+}
+ 
+button {
+    width: 20%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#custom-instruction-container {
+    margin-top: 10px;
+}
+
+#custom-instruction-input {
+    white-space: pre-wrap; /* Should wrap text */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Wrap long words */
+    width: 100%;
+    height: 100px; /* Adjust as needed */
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing */
+    border: 1px solid #ccc; /* Just for visibility */
+}
+
+
