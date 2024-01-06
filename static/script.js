@@ -1,7 +1,7 @@
 function sendMessage() {
     var userInput = document.getElementById('user-input').value;
-    var customInstruction = document.getElementById('custom-instruction-input').value;
-    document.getElementById('user-input').value = '';
+    var customInstruction = document.getElementById('custom-instruction-input').value; // Get custom instruction
+    document.getElementById('user-input').value = ''; // Clear the user input field
 
     // Update UI to show user's message
     var chatBox = document.getElementById('chat-box');
@@ -15,12 +15,13 @@ function sendMessage() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
             chatBox.innerHTML += `<div>Chatbot: ${response.message}</div>`;
-            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+            chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the latest message
         }
     };
     var data = JSON.stringify({"message": userInput, "custom_instruction": customInstruction});
     xhr.send(data);
 }
+
 
 function addMessageToChatBox(sender, message) {
     var messageElement = document.createElement('div');
